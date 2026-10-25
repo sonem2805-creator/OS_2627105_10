@@ -1,0 +1,1 @@
+print("Banker's Algorithm")
