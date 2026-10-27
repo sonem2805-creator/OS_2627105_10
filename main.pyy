@@ -1,0 +1,28 @@
+from source.banker import doc_file_csv, tinh_need, kiem_tra_an_toan, ghi_file_csv
+def in_ket_qua(ten_file, pids, allocation, max_need, need, available, an_toan, chuoi_an_toan, ds_deadlock):
+    print("\n==================================================")
+    print("File:", ten_file)
+    print("Available ban dau:", available)
+    print("PID\tAllocation\tMax\t\tNeed")
+    for i in range(len(pids)):
+        print(f"{pids[i]}\t{allocation[i]}\t{max_need[i]}\t{need[i]}")
+    if an_toan:
+        print("Ket qua: HE THONG AN TOAN (SAFE)")
+        print("Chuoi an toan:", " -> ".join(chuoi_an_toan))
+    else:
+        print("Ket qua: PHAT HIEN KHONG AN TOAN / DEADLOCK")
+        print("Cac tien trinh bi tac nghen:", ", ".join(ds_deadlock))
+def main():
+    cac_file = ["input/test1.csv", "input/test2.csv", "input/test3.csv"]    for duong_dan in cac_file:
+        pids, allocation, max_need, available = doc_file_csv(duong_dan)
+        need = tinh_need(allocation, max_need)
+        an_toan, chuoi_an_toan, ds_deadlock, lich_su_work = kiem_tra_an_toan(
+            pids, allocation, need, available
+        )
+        in_ket_qua(duong_dan, pids, allocation, max_need, need, available, an_toan, chuoi_an_toan, ds_deadlock)
+        if duong_dan == "input/test1.csv":
+            ghi_file_csv("output/result_test1.csv", pids, allocation, max_need, need, an_toan, chuoi_an_toan, ds_deadlock)
+        if duong_dan == "input/test2.csv":
+            ghi_file_csv("output/result_test2.csv", pids, allocation, max_need, need, an_toan, chuoi_an_toan, ds_deadlock)
+if __name__ == "__main__":
+    main()
