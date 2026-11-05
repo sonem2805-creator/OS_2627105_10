@@ -1,4 +1,7 @@
-Process,Allocation_A,Allocation_B,Request_A,Request_B
-P0,1,0,0,1
-P1,0,1,1,0
-P2,1,1,1,1
+Process,Allocation_A,Allocation_B,Allocation_C,Request_A,Request_B,Request_C
+P0,0,1,0,0,0,0
+P1,2,0,0,2,0,2
+P2,3,0,2,0,0,0
+P3,2,1,1,1,0,0
+P4,0,0,2,0,1,1
+AVAILABLE,0,0,0,,,
