@@ -9,6 +9,7 @@ Chuong trinh mo phong:
 
 from banker_engine import safety_check, resource_request
 from deadlock_engine import detect_deadlock
+from src.csv_handler import doc_file_csv
 
 
 def print_history(history):
@@ -242,4 +243,5 @@ def main():
 
 
 if __name__ == "__main__":
+    
     main()
