@@ -10,7 +10,7 @@
 - Mô phỏng phục hồi Deadlock.
 
 ## 3. Công nghệ sử dụng
-- Ngôn ngữ lập trình: Python (hãy kiểm tra lại theo code thực tế).
+- Ngôn ngữ lập trình: Python.
 - Môi trường phát triển: Visual Studio Code.
 - Quản lý mã nguồn: GitHub.
 
@@ -21,9 +21,14 @@
 4. Nhập lựa chọn theo menu hiển thị.
 
 ## 5. Chức năng
-- Mô phỏng thuật toán Banker.
-- Phát hiện Deadlock.
-- Phục hồi Deadlock.
+- Kiểm tra trạng thái an toàn bằng thuật toán Banker.
+- Mô phỏng yêu cầu cấp phát tài nguyên (Resource Request).
+- Phát hiện tình trạng Deadlock.
+- Xác định các tiến trình bị Deadlock.
+- Mô phỏng phục hồi Deadlock bằng cách kết thúc tiến trình và thu hồi tài nguyên.
+Đã gửi
+Soạn
+Viết cho
 
 ## 6. Kết luận
 Đề tài giúp tìm hiểu cách quản lý tài nguyên, kiểm tra trạng thái an toàn và xử lý Deadlock trong hệ điều hành.
