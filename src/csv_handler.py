@@ -34,47 +34,65 @@ def doc_file_csv(file_path):
             "Không tìm thấy file CSV"
         )
 
+    if os.path.getsize(file_path) == 0:
+        raise CSVValidationError(
+            "File CSV rỗng"
+        )
+
     allocation = []
     max_need = []
     processes = []
     available = None
 
-    with open(
-        file_path,
-        mode="r",
-        encoding="utf-8"
-    ) as file:
+    try:
 
-        reader = csv.DictReader(file)
+        with open(
+            file_path,
+            mode="r",
+            encoding="utf-8"
+        ) as file:
 
-        for row in reader:
+            reader = csv.DictReader(file)
 
-            process = row["Process"].strip()
+            for row in reader:
 
-            if process.upper() == "AVAILABLE":
+                process = row["Process"].strip()
 
-                available = [
+                if process.upper() == "AVAILABLE":
+
+                    available = [
+                        int(row["Allocation_A"]),
+                        int(row["Allocation_B"]),
+                        int(row["Allocation_C"])
+                    ]
+
+                    continue
+
+                alloc = [
                     int(row["Allocation_A"]),
                     int(row["Allocation_B"]),
                     int(row["Allocation_C"])
                 ]
 
-                continue
+                max_row = [
+                    int(row["Max_A"]),
+                    int(row["Max_B"]),
+                    int(row["Max_C"])
+                ]
 
-            allocation.append([
-                int(row["Allocation_A"]),
-                int(row["Allocation_B"]),
-                int(row["Allocation_C"])
-            ])
+                processes.append(process)
+                allocation.append(alloc)
+                max_need.append(max_row)
 
-            max_need.append([
-                int(row["Max_A"]),
-                int(row["Max_B"]),
-                int(row["Max_C"])
-            ])
+    except ValueError:
+        raise CSVValidationError(
+            "CSV chứa dữ liệu không phải số nguyên"
+        )
 
-            processes.append(process)
-
+    if len(processes) == 0:
+        raise CSVValidationError(
+            "Không có process nào"
+        )
     if available is None:
         raise CSVValidationError(
             "Thiếu dòng AVAILABLE"
