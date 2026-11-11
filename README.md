@@ -38,9 +38,35 @@ Lê Công Vinh (Data & Tester): Lập trình module đọc/ghi file CSV, bắt l
 
 Huỳnh Nguyễn Nhất Huy (GUI Developer): Thiết kế và lập trình Giao diện Desktop (PyQt6/WinForms).
 
-[ LỘ TRÌNH THỰC HIỆN DÀNH CHO CÁC THÀNH VIÊN (TUẦN 5 ĐẾN TUẦN 8) ]
+[ LỘ TRÌNH THỰC HIỆN CHI TIẾT TỪ TUẦN 1 ĐẾN TUẦN 8 ]
 
-Tuần 5 - Phát triển Giao diện GUI (Đang thực hiện):
+Tuần 1 - Khởi tạo dự án và Phân công công việc (Đã hoàn thành):
+
+Cả nhóm: Chốt đề tài OS_DLK_10, lập GitHub Repository chính thức.
+
+Hiển: Phân chia vai trò 5 thành viên, tạo cấu trúc thư mục code chuẩn.
+
+Khang, Sơn, Vinh, Huy: Nhận nhiệm vụ, cài đặt môi trường làm việc Python và Git.
+
+Tuần 2 - Lập Mô hình toán học và Bản chạy thử Terminal (Đã hoàn thành):
+
+Khang & Sơn: Viết thuật toán Banker và Phát hiện Deadlock dạng cơ bản chạy trên màn hình Terminal (Proof of Concept).
+
+Vinh: Chuẩn hóa dữ liệu ma trận đầu vào (Allocation, Max, Available, Need).
+
+Huy: Vẽ phác thảo giao diện phần mềm (Wireframe).
+
+Hiển: Soạn thảo nội dung Báo cáo Tiến độ Checkpoint 01 (Chương 1 và Chương 2).
+
+Tuần 3 và 4 - Đóng gói Lõi Thuật toán và Module Đọc/Ghi CSV (Đã hoàn thành):
+
+Khang & Sơn: Đóng gói các hàm kiểm tra an toàn và phát hiện bế tắc vào thư mục source/banker.py theo mô hình Clean Architecture.
+
+Vinh: Lập trình xong các hàm doc_file_csv và ghi_file_csv để nạp dữ liệu từ thư mục input/ và tự động xuất kết quả ra thư mục output/.
+
+Hiển & Huy: Kiểm tra tính liên kết của mã nguồn main.py và đóng gói hồ sơ nộp Checkpoint 01 đúng hạn lên LMS.
+
+Tuần 5 - Phát triển Giao diện GUI Desktop (Đang thực hiện):
 
 Huy: Vẽ giao diện Desktop (nút chọn file CSV, các bảng ma trận, các nút bấm chạy thuật toán).
 
@@ -68,7 +94,7 @@ Khang & Sơn: Dọn dẹp mã nguồn, xóa code thừa và thêm ghi chú giả
 
 Hiển: Duyệt mã nguồn lần cuối trên GitHub, chốt bản chính thức v1.0 và viết Chương 5 (Kết luận).
 
-Tuần 8 - Hoàn thiện Báo cáo, Video Demo và Bảo vệ:
+Tuần 8 - Hoàn thiện Báo cáo, Video Demo và Bảo vệ Đồ án:
 
 Hiển: Căn chỉnh file Báo cáo Word (8 đến 12 trang), xuất PDF và làm Slide thuyết trình.
 
