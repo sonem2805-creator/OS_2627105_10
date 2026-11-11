@@ -1,37 +1,77 @@
-# Mô phỏng thuật toán Banker và phát hiện/phục hồi Deadlock
+MÔ PHỎNG THUẬT TOÁN BANKER VÀ PHÁT HIỆN / PHỤC HỒI DEADLOCK
 
-## 1. Giới thiệu
-Đề tài mô phỏng thuật toán Banker, phát hiện Deadlock và phục hồi Deadlock trong hệ điều hành.
+Đề tài: Mô phỏng Thuật toán Banker và Phát hiện / Phục hồi Deadlock (Mã đề tài: OS_DLK_10)
 
-## 2. Mục tiêu
-- Tìm hiểu thuật toán Banker.
-- Kiểm tra trạng thái an toàn của hệ thống.
-- Phát hiện tình trạng Deadlock.
-- Mô phỏng phục hồi Deadlock.
+Lớp học phần: 012012500105
 
-## 3. Công nghệ sử dụng
-- Ngôn ngữ lập trình: Python.
-- Môi trường phát triển: Visual Studio Code.
-- Quản lý mã nguồn: GitHub.
+Mã nhóm LMS: OS_2627105_10
 
-## 4. Hướng dẫn chạy
-1. Cài đặt Python nếu chương trình sử dụng Python.
-2. Mở Terminal tại thư mục chứa chương trình.
-3. Chạy lệnh `python main.py`.
-4. Nhập lựa chọn theo menu hiển thị.
+Môn học: Hệ điều hành - Trường Đại học Giao thông vận tải TP.HCM (UTH)
 
-## 5. Chức năng
-- Kiểm tra trạng thái an toàn bằng thuật toán Banker.
-- Mô phỏng yêu cầu cấp phát tài nguyên (Resource Request).
-- Phát hiện tình trạng Deadlock.
-- Xác định các tiến trình bị Deadlock.
-- Mô phỏng phục hồi Deadlock bằng cách kết thúc tiến trình và thu hồi tài nguyên.
-Đã gửi
-Soạn
-Viết cho
+Giảng viên hướng dẫn: ThS. Mai Ngọc Châu
 
-## 6. Kết luận
-Đề tài giúp tìm hiểu cách quản lý tài nguyên, kiểm tra trạng thái an toàn và xử lý Deadlock trong hệ điều hành.
+Link GitHub: https://github.com/sonem2805-creator/OS_2627105_10
 
-## 7. Thông tin nhóm
-- Repository: OS_2627105_10
+==================================================
+
+GIỚI THIỆU VÀ MỤC TIÊU DỰ ÁN
+
+Dự án xây dựng phần mềm mô phỏng các cơ chế quản lý tài nguyên trong Hệ điều hành:
+
+Tránh Deadlock: Kiểm tra trạng thái an toàn (Safety Check) và xử lý yêu cầu cấp phát tài nguyên (Resource Request) theo Thuật toán Banker.
+
+Phát hiện và Phục hồi Deadlock: Tìm danh sách các tiến trình bị tắc nghẽn và mô phỏng việc giải phóng tài nguyên để phục hồi hệ thống.
+
+==================================================
+
+PHÂN CÔNG VAI TRÒ VÀ NHIỆM VỤ THÀNH VIÊN
+
+[ BẢNG PHÂN CÔNG VAI TRÒ CHÍNH ]
+
+Nguyễn Thanh Hiển (Trưởng nhóm): Quản lý tiến độ, quản trị GitHub, viết Báo cáo Word/PDF và làm Slide thuyết trình.
+
+Hà Vũ Khang (Core Lead 1): Lập trình Lõi Thuật toán Banker.
+
+Đan Ngọc Sơn (Core Lead 2): Lập trình Lõi Thuật toán Phát hiện và Phục hồi Deadlock.
+
+Lê Công Vinh (Data & Tester): Lập trình module đọc/ghi file CSV, bắt lỗi dữ liệu, tính bài toán mẫu và quay Video Demo.
+
+Huỳnh Nguyễn Nhất Huy (GUI Developer): Thiết kế và lập trình Giao diện Desktop (PyQt6/WinForms).
+
+[ LỘ TRÌNH THỰC HIỆN DÀNH CHO CÁC THÀNH VIÊN (TUẦN 5 ĐẾN TUẦN 8) ]
+
+Tuần 5 - Phát triển Giao diện GUI (Đang thực hiện):
+
+Huy: Vẽ giao diện Desktop (nút chọn file CSV, các bảng ma trận, các nút bấm chạy thuật toán).
+
+Khang & Sơn: Chỉnh code thuật toán trả về dữ liệu chuẩn để Huy đưa lên màn hình (Màu Xanh = An toàn, Màu Đỏ = Deadlock).
+
+Vinh: Ghép phần đọc file CSV vào giao diện để khi bấm chọn file thì dữ liệu tự điền vào bảng.
+
+Hiển: Soạn trước Chương 3 (Thiết kế và Cài đặt phần mềm) trong báo cáo Word.
+
+Tuần 6 - Kiểm thử (Test) và Đo tốc độ (Stress Test):
+
+Vinh: Tự giải 3 đến 5 bài toán ra giấy để làm kết quả mẫu, cho phần mềm chạy đối chiếu xem đúng hay sai.
+
+Khang & Sơn: Tạo file CSV dữ liệu lớn (50, 100, 500 tiến trình) cho thuật toán chạy thử để đo thời gian xử lý.
+
+Huy: Thêm thanh cuộn cho các bảng ma trận lớn trên giao diện.
+
+Hiển: Thu thập số liệu đưa vào Chương 4 (Thực nghiệm và Đánh giá) trong báo cáo Word.
+
+Tuần 7 - Sửa lỗi và Tối ưu phần mềm:
+
+Vinh & Huy: Bắt các lỗi người dùng nhập sai (file rỗng, nhập chữ thay vì số, nhập số âm) và hiện thông báo nhắc nhở.
+
+Khang & Sơn: Dọn dẹp mã nguồn, xóa code thừa và thêm ghi chú giải thích thuật toán.
+
+Hiển: Duyệt mã nguồn lần cuối trên GitHub, chốt bản chính thức v1.0 và viết Chương 5 (Kết luận).
+
+Tuần 8 - Hoàn thiện Báo cáo, Video Demo và Bảo vệ:
+
+Hiển: Căn chỉnh file Báo cáo Word (8 đến 12 trang), xuất PDF và làm Slide thuyết trình.
+
+Vinh: Quay video màn hình thao tác ứng dụng từ A đến Z, đăng lên YouTube hoặc Google Drive lấy link.
+
+Cả nhóm: Ôn tập lại thuật toán để cùng Trưởng nhóm trả lời câu hỏi bảo vệ đồ án.
