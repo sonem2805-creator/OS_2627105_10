@@ -110,3 +110,38 @@ def doc_file_csv(file_path):
         "available": available,
         "need": need
     }
+
+import os
+import csv
+
+def ghi_file_csv(ten_file, status, ket_qua):
+    """
+    Ghi kết quả ra thư mục output/
+    """
+
+    os.makedirs("output", exist_ok=True)
+
+    duong_dan = os.path.join("output", ten_file)
+
+    with open(
+        duong_dan,
+        "w",
+        newline="",
+        encoding="utf-8"
+    ) as file:
+
+        writer = csv.writer(file)
+
+        writer.writerow(["Status", status])
+
+        writer.writerow([])
+
+        writer.writerow(["Ket qua"])
+
+        if isinstance(ket_qua, list):
+            for item in ket_qua:
+                writer.writerow([item])
+        else:
+            writer.writerow([ket_qua])
+
+    return duong_dan
