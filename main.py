@@ -7,7 +7,7 @@ Chuong trinh mo phong:
 - Deadlock Recovery
 """
 
-from banker_engine import safety_check, resource_request
+from banker_engine import chay_banker
 from deadlock_engine import detect_deadlock
 from src.csv_handler import doc_file_csv
 
@@ -59,7 +59,10 @@ def banker():
 
     available = [3, 3, 2]
 
-    result = safety_check(
+    pids = ["P0", "P1", "P2", "P3", "P4"]
+
+    result = chay_banker(
+        pids,
         allocation,
         maximum,
         available
