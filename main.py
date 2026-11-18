@@ -7,8 +7,8 @@ Chuong trinh mo phong:
 - Deadlock Recovery
 """
 
-from banker_engine import safety_check, resource_request
-from deadlock_engine import detect_deadlock
+from source.banker_engine import safety_check, resource_request
+from source.deadlock_engine import detect_deadlock
 
 
 def print_history(history):
