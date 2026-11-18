@@ -6,7 +6,6 @@ Chuong trinh mo phong:
 - Deadlock Detection
 - Deadlock Recovery
 """
-
 from banker_engine import chay_banker
 from deadlock_engine import detect_deadlock
 from src.csv_handler import doc_file_csv
